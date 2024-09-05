@@ -1,19 +1,23 @@
 import { Title } from "@solidjs/meta";
-import Counter from "~/components/Counter";
+import Form from "~/components/Form";
 
 export default function Home() {
   return (
-    <main>
-      <Title>Hello World</Title>
-      <h1>Hello world!</h1>
-      <Counter />
-      <p>
-        Visit{" "}
-        <a href="https://start.solidjs.com" target="_blank">
-          start.solidjs.com
-        </a>{" "}
-        to learn how to build SolidStart apps.
-      </p>
-    </main>
+    <>
+      <div class='responsive center-align blue-4'></div>
+      <main class='responsive'>
+        <Title>Submit Bounty</Title>
+        <div class='begin'>
+          <div class='responsive small-height no-padding'>
+            <div class='center middle padding'>
+              <h1 class='center-align'>Submit experiment idea</h1>
+            </div>
+          </div>
+          <article class="responsive padding">
+            <Form />
+          </article>
+        </div>
+      </main>
+    </>
   );
 }
