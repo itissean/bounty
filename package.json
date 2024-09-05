@@ -30,12 +30,13 @@
   "author": "Sean Aethelwulf <sean@wulfcode.com>",
   "license": "MIT",
   "devDependencies": {
+    "@faker-js/faker": "^9.0.0",
+    "@typescript-eslint/parser": "^8.4.0",
     "eslint": "^9.9.1",
     "eslint-plugin-solid": "^0.14.3",
     "husky": "^8.0.0",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
-    "@typescript-eslint/parser": "^8.4.0",
     "vite-plugin-eslint": "^1.8.1"
   }
 }
