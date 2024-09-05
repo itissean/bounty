@@ -7,8 +7,12 @@
   "scripts": {
     "dev": "vinxi dev",
     "build": "vinxi build",
+    "lint": "eslint .",
+    "fix": "eslint .",
+    "prettier": "prettier . --write",
     "start": "vinxi start",
-    "version": "vinxi version"
+    "version": "vinxi version",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@modular-forms/solid": "^0.22.1",
@@ -17,14 +21,21 @@
     "@solidjs/start": "^1.0.6",
     "beercss": "^3.6.13",
     "solid-js": "^1.8.18",
-    "solid-styled": "^0.11.1",
-    "vinxi": "^0.4.1",
-    "vite-plugin-solid-styled": "^0.11.1"
+    "vinxi": "^0.4.1"
   },
   "engines": {
     "node": ">=18"
   },
   "keywords": [],
   "author": "Sean Aethelwulf <sean@wulfcode.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^9.9.1",
+    "eslint-plugin-solid": "^0.14.3",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "@typescript-eslint/parser": "^8.4.0",
+    "vite-plugin-eslint": "^1.8.1"
+  }
 }

@@ -1,16 +1,23 @@
-import { defineConfig } from "@solidjs/start/config";
-import type { PluginOption } from "vite";
-import solidStyled from "vite-plugin-solid-styled";
+import { defineConfig } from '@solidjs/start/config';
+import eslint from 'vite-plugin-eslint';
 
 export default defineConfig({
   vite: {
     plugins: [
-      solidStyled({
-        filter: {
-          include: "src/**/*.tsx",
-          exclude: "node_modules/**/*.{ts,js}"
-        }
-      }) as PluginOption
-    ]
-  }
+      {
+        // default settings on build (i.e. fail on error)
+        ...eslint(),
+        apply: 'build',
+      },
+      {
+        // do not fail on serve (i.e. local development)
+        ...eslint({
+          failOnWarning: false,
+          failOnError: false,
+        }),
+        apply: 'serve',
+        enforce: 'post',
+      },
+    ],
+  },
 });

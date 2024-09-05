@@ -1,8 +1,9 @@
+import { For } from 'solid-js';
 import fixture from '../../fixtures/leaderboard.json';
 
 export default function Table() {
   return (
-    <table class='stripes'>
+    <table class="stripes">
       <thead>
         <tr>
           <th>Name</th>
@@ -12,17 +13,17 @@ export default function Table() {
         </tr>
       </thead>
       <tbody>
-        {fixture.leaderboard.map(row => {
-          return (
+        <For each={fixture.leaderboard}>
+          {(row) => (
             <tr>
               <td>{row.name}</td>
               <td>{row.email}</td>
               <td>${row.revenue}</td>
               <td>{row.idea}</td>
             </tr>
-          );
-        })}
+          )}
+        </For>
       </tbody>
     </table>
   );
-};
+}

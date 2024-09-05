@@ -1,4 +1,5 @@
 # bounty
+
 Experiment bounty board.
 
 ## Developing
