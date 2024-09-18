@@ -11,7 +11,10 @@ export default function Form() {
 
   const handleSubmit: SubmitHandler<BountyForm> = (values) => {
     // eslint-disable-next-line
-    console.log(values);
+    const submit = fetch('/api/idea', {
+      method: 'POST',
+      body: JSON.stringify(values),
+    });
   };
 
   return (
